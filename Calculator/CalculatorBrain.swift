@@ -68,8 +68,9 @@ init() {
         
     }
     
-    func pushOperand(operandIn: Double){
+    func pushOperand(operandIn: Double) -> Double? {
         opStack.append(Op.Operand(operandIn))
+        return evaluate()
     }
     
     func performOperation(symbolIn: String){
